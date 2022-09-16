@@ -1,0 +1,36 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "DXP Base",
+    "type": "object",
+    "required": [
+        "id",
+        "guid"
+    ],
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "A persistent unique id"
+        },
+        "guid": {
+            "type": "string",
+            "format": "uuid",
+            "description": "A globally unique identifier"
+        },
+        "name": {
+            "type": "string",
+            "description": "A friendly name (typically from an external system)"
+        },
+        "contentType": {
+            "type": "string",
+            "description": "Describes the structure of the content object"
+        },
+        "content": {
+            "type": "object",
+            "description": "This typically contains presentation data"
+        },
+        "parameters": {
+            "type": "object",
+            "description": "This typically contains instructional metadata"
+        }
+    }
+}

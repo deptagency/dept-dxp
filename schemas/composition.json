@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "DXP Composition",
+    "allOf": [
+        {
+            "$ref": "base.json"
+        }
+    ],
+    "properties": {
+        "regions": {
+            "type": "array",
+            "items": {
+                "$ref": "region.json"
+            }
+        }
+    }
+}

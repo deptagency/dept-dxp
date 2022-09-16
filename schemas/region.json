@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "DXP Region",
+    "allOf": [
+        {
+            "$ref": "base.json"
+        }
+    ],
+    "properties": {
+        "regions": {
+            "type": "array",
+            "items": {
+                "$ref": "#"
+            }
+        },
+        "components": {
+            "type": "array",
+            "items": {
+                "$ref": "component.json"
+            }
+        }
+    }
+}
