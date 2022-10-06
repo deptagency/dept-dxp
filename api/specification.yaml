@@ -1,0 +1,42 @@
+openapi: 3.1.0
+info:
+  title: Dept DXP
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.0
+servers:
+  - url: https://deptagency.github.io/dept-dxp/api/example
+    description: Production Example
+paths:
+  /experience/composition:
+    get:
+      summary: Get a composition.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':
+          description: A composition model
+          content:
+            application/json:
+              schema: 
+                $ref: ../schemas/composition.json
+        '404':
+          description: Composition not found.
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/composition.json
+  /experience/component:
+    get:
+      summary: Get a component.
+      responses:
+        '200':
+          description: A component model
+          content:
+            application/json:
+              schema: 
+                $ref: ../schemas/component.json
+        '404':
+          description: Content not found.
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/component.json
